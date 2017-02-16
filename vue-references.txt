@@ -22,5 +22,6 @@ References Links:
 		Reactivity in Depth: http://vuejs.org/guide/reactivity.html
 		".vue" Files: http://vuejs.org/guide/single-file-components.html
 		"render()" function: http://vuejs.org/guide/render-function.html
+		Components: http://vuejs.org/guide/components.html
 	Other Docs:
 		vue-cli: https://github.com/vuejs/vue-cli

@@ -17,3 +17,9 @@
         }
     }
 </script>
+
+<style scoped lang="scss">
+    div {
+        border: 1px solid blue;
+    }
+</style>

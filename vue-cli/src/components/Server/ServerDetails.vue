@@ -13,3 +13,9 @@
         }
     }
 </script>
+
+<style scoped lang="scss">
+    div {
+        border: 1px solid red;
+    }
+</style>
