@@ -20,4 +20,7 @@ References Links:
 		Class and Style Binding: http://vuejs.org/guide/class-and-style.html
 		The Vue Instance: http://vuejs.org/guide/instance.html
 		Reactivity in Depth: http://vuejs.org/guide/reactivity.html
-
+		".vue" Files: http://vuejs.org/guide/single-file-components.html
+		"render()" function: http://vuejs.org/guide/render-function.html
+	Other Docs:
+		vue-cli: https://github.com/vuejs/vue-cli
