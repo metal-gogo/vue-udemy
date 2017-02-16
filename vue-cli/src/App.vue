@@ -1,21 +1,21 @@
 <template>
     <div class="container">
-        <header-cmp></header-cmp>
+        <app-header></app-header>
         <dashboard></dashboard>
-        <footer-cmp></footer-cmp>
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
-    import Header from './components/Shared/Header.vue';
+    import AppHeader from './components/Shared/Header.vue';
     import Dashboard from './components/Server/Dashboard.vue';
-    import Footer from './components/Shared/Footer.vue';
+    import AppFooter from './components/Shared/Footer.vue';
     
     export default {
         components: {
-            'header-cmp': Header,
-            'dashboard': Dashboard,
-            'footer-cmp': Footer
+            AppHeader,
+            Dashboard,
+            AppFooter
         }
     }
 </script>

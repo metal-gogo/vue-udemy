@@ -11,8 +11,8 @@
 
     export default {
         components: {
-            'server-list': ServerList,
-            'server-details': ServerDetails
+            ServerList,
+            ServerDetails
         }
     }
 </script>
