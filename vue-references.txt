@@ -9,6 +9,8 @@ Demos:
 		Computed Properties & Watch: https://jsfiddle.net/smax/yLjqxmw0/
 		Dynamic Classes: https://jsfiddle.net/smax/gowg40ym/
 		Dynamic Styles: https://jsfiddle.net/smax/3rvdLq5y/
+		The Vue Instance Code: https://jsfiddle.net/smax/9a2k6cja/2/
+		The VueJS Instance Lifecycle: https://jsfiddle.net/smax/jcgw7ak8/
 References Links:
 	Official Docs:
 		Getting Started: http://vuejs.org/guide/
@@ -16,3 +18,6 @@ References Links:
 		Events: http://vuejs.org/guide/events.html
 		Computed Properties & Watchers: http://vuejs.org/guide/computed.html
 		Class and Style Binding: http://vuejs.org/guide/class-and-style.html
+		The Vue Instance: http://vuejs.org/guide/instance.html
+		Reactivity in Depth: http://vuejs.org/guide/reactivity.html
+
