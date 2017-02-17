@@ -8,14 +8,12 @@
             <div class="col-xs-12 col-sm-6">
                 <app-user-detail 
                     :name="name"
-                    :resetFn="resetName"
                     :userAge="age">
                 </app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit 
-                    :userAge="age"
-                    :editAge="editAge">
+                    :userAge="age">
                 </app-user-edit>
             </div>
         </div>
@@ -25,6 +23,7 @@
 <script>
     import UserDetail from './UserDetail.vue';
     import UserEdit from './UserEdit.vue';
+    import { eventBus } from '../main';
 
     export default {
         components: {
@@ -47,6 +46,11 @@
             editAge() {
                 this.age = 30;
             }
+        },
+        created() {
+            eventBus.$on('nameWasReset', (data) => {
+                this.name = data
+            });
         }
     }
 </script>
