@@ -25,12 +25,13 @@
             },
             resetName() {
                 this.name = 'Metal Gogo';
-                eventBus.$emit('nameWasReset', this.name);
+                // eventBus.$emit('nameWasReset', this.name);
+                eventBus.resetName(this.name);
             }
         },
         created() {
             eventBus.$on('ageWasEdited', (data) => {
-                this.userAge = data
+                this.userAge = data;
             });
         }
     }
