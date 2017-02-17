@@ -23,5 +23,8 @@ References Links:
 		".vue" Files: http://vuejs.org/guide/single-file-components.html
 		"render()" function: http://vuejs.org/guide/render-function.html
 		Components: http://vuejs.org/guide/components.html
+		Props: http://vuejs.org/guide/components.html#Props
+		Custom Events: http://vuejs.org/guide/components.html#Custom-Events
+		Communication: http://vuejs.org/guide/components.html#Non-Parent-Child-Communication
 	Other Docs:
 		vue-cli: https://github.com/vuejs/vue-cli
