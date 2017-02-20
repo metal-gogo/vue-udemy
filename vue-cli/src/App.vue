@@ -70,13 +70,15 @@
                         <input
                                 type="radio"
                                 id="male"
-                                value="Male"> Male
+                                value="Male"
+                                v-model='userData.gender'> Male
                     </label>
                     <label for="female">
                         <input
                                 type="radio"
                                 id="female"
-                                value="Female"> Female
+                                value="Female"
+                                v-model='userData.gender'> Female
                     </label>
                 </div>
             </div>
@@ -134,7 +136,8 @@
                 userData: {
                     email: '',
                     password: '',
-                    age: 27
+                    age: 27,
+                    gender: 'Male'
                 },
                 message: 'This a default value for a textarea',
                 sendMail: []
