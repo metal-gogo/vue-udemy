@@ -10,24 +10,21 @@
                         <input
                                 type="text"
                                 id="email"
-                                class="form-control"
-                                v-model="userData.email">
+                                class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input
                                 type="password"
                                 id="password"
-                                class="form-control"
-                                v-model="userData.password">
+                                class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
                         <input
                                 type="number"
                                 id="age"
-                                class="form-control"
-                                v-model="userData.age">
+                                class="form-control">
                     </div>
 
                 </div>
@@ -104,9 +101,9 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Mail: {{ userData.email }}</p>
-                        <p>Password: {{ userData.password }}</p>
-                        <p>Age: {{userData.age}} </p>
+                        <p>Mail:</p>
+                        <p>Password:</p>
+                        <p>Age:</p>
                         <p>Message: </p>
                         <p><strong>Send Mail?</strong></p>
                         <ul>
@@ -124,15 +121,6 @@
 
 <script>
     export default {
-        data() {
-            return {
-                userData: {
-                    email: '',
-                    password: '',
-                    age: 27
-                }
-            };
-        }
     }
 </script>
 
