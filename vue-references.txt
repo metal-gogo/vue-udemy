@@ -30,5 +30,6 @@ References Links:
 		Dynamic Components: http://vuejs.org/guide/components.html#Dynamic-Components
 		Misc: http://vuejs.org/guide/components.html#Misc
 		Forms: http://vuejs.org/guide/forms.html
+		Custom Directives: http://vuejs.org/guide/custom-directive.html
 	Other Docs:
 		vue-cli: https://github.com/vuejs/vue-cli

@@ -12,7 +12,7 @@
                 <h1>Custom Directives</h1>
                 <p v-highlight:background="'violet'">Color this background</p>
                 <p v-highlight:background.delayed="'violet'">Color this background</p>
-                <p v-local-highlight:background.delayed="'violet'">Color this background</p>
+                <p v-local-highlight:background.delayed.blink="{mainColor: 'violet', secondColor: 'turquoise', blinkTime: 500}">Color this background</p>
                 <p v-highlight:color="'green'">Color this text</p>
             </div>
         </div>
@@ -28,15 +28,31 @@
                     if ( binding.modifiers['delayed'] ) {
                         delay = 3000;
                     }
-                    setTimeout(() => {
-                        // el.style.backgroundColor = 'green';
-                        // el.style.backgroundColor = binding.value;
-                        if( binding.arg === 'background' ) {
-                            el.style.backgroundColor = binding.value;
-                        } else {
-                            el.style.color = binding.value;
-                        }
-                    }, delay);
+                    if ( binding.modifiers['blink'] ) {
+                        let mainColor = binding.value.mainColor;
+                        let secondColor = binding.value.secondColor;
+                        let currentColor = mainColor;
+                        setTimeout(() => {
+                            setInterval(() => {
+                                currentColor === secondColor ?
+                                    currentColor = mainColor :
+                                    currentColor = secondColor;
+                                if( binding.arg === 'background' ) {
+                                    el.style.backgroundColor = currentColor;
+                                } else {
+                                    el.style.color = currentColor;
+                                }
+                            }, binding.value.blinkTime);
+                        }, delay);
+                    } else {
+                        setTimeout(() => {
+                            if( binding.arg === 'background' ) {
+                                el.style.backgroundColor = binding.value.mainColor;
+                            } else {
+                                el.style.color = binding.value.mainColor;
+                            }
+                        }, delay);
+                    }
                 }
             }
         }
