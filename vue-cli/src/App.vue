@@ -12,6 +12,7 @@
                 <h1>Custom Directives</h1>
                 <p v-highlight:background="'violet'">Color this background</p>
                 <p v-highlight:background.delayed="'violet'">Color this background</p>
+                <p v-local-highlight:background.delayed="'violet'">Color this background</p>
                 <p v-highlight:color="'green'">Color this text</p>
             </div>
         </div>
@@ -20,6 +21,25 @@
 
 <script>
     export default {
+        directives: {
+            'local-highlight': {
+                bind(el, binding, vnode) {
+                    let delay = 0;
+                    if ( binding.modifiers['delayed'] ) {
+                        delay = 3000;
+                    }
+                    setTimeout(() => {
+                        // el.style.backgroundColor = 'green';
+                        // el.style.backgroundColor = binding.value;
+                        if( binding.arg === 'background' ) {
+                            el.style.backgroundColor = binding.value;
+                        } else {
+                            el.style.color = binding.value;
+                        }
+                    }, delay);
+                }
+            }
+        }
     }
 </script>
 
