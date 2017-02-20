@@ -1,14 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 
-export const eventBus = new Vue({
-  methods: {
-    changeAge(age) {
-      this.$emit('ageWasEdited', age);
-    },
-    resetName(name) {
-      this.$emit('nameWasReset', name);
-    }
+Vue.directive('highlight', {
+  bind(el, binding, vnode) {
+    el.style.backgroundColor = 'green';
   }
 });
 
