@@ -87,8 +87,11 @@
                     <label for="priority">Priority</label>
                     <select
                             id="priority"
-                            class="form-control">
-                        <option></option>
+                            class="form-control"
+                            v-model="selectedPriority">
+                        <option v-for="priority in priorities">
+                            {{ priority }}
+                        </option>
                     </select>
                 </div>
             </div>
@@ -119,8 +122,8 @@
                                 {{ item }}
                             </li>
                         </ul>
-                        <p>Gender:</p>
-                        <p>Priority:</p>
+                        <p>Gender: {{ userData.gender }} </p>
+                        <p>Priority: {{ selectedPriority }}</p>
                         <p>Switched:</p>
                     </div>
                 </div>
@@ -140,7 +143,13 @@
                     gender: 'Male'
                 },
                 message: 'This a default value for a textarea',
-                sendMail: []
+                sendMail: [],
+                priorities: [
+                    'High',
+                    'Medium',
+                    'Low'
+                ],
+                selectedPriority: 'High'
             };
         }
     }
