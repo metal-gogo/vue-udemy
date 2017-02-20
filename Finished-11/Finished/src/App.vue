@@ -60,7 +60,7 @@
 </template>
 
 <script>
-    import FullName from './components/FullName.vue';
+    import FullName from './FullName.vue';
 
     export default {
         data() {
