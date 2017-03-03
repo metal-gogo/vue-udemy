@@ -16,6 +16,9 @@
     mixins: [
       fruitMixin
     ],
+    created() {
+      console.log("List created");
+    },
   }
 </script>
 
