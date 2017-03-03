@@ -10,20 +10,12 @@
 </template>
 
 <script>
+  import { fruitMixin } from './FruitMixin.js';
+
   export default {
-    data() {
-      return {
-        fruits: ['Apple', 'Banana', 'Mango', 'Melon'],
-        text: 'Hello there!',
-      };
-    },
-    computed: {
-      filteredFruits() {
-        return this.fruits.filter((element) => {
-          return element.match(this.filterText);
-        });
-      }
-    },
+    mixins: [
+      fruitMixin
+    ],
   }
 </script>
 
