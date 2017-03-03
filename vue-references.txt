@@ -31,5 +31,7 @@ References Links:
 		Misc: http://vuejs.org/guide/components.html#Misc
 		Forms: http://vuejs.org/guide/forms.html
 		Custom Directives: http://vuejs.org/guide/custom-directive.html
+    Filters: http://vuejs.org/guide/syntax.html#Filters
+    Mixins: http://vuejs.org/guide/mixins.html
 	Other Docs:
 		vue-cli: https://github.com/vuejs/vue-cli
