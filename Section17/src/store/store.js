@@ -16,29 +16,29 @@ export const store = new Vuex.Store({
     },
   },
   mutations: {
-    increment: state => {
-      state.counter++;
+    increment: (state, payload) => {
+      state.counter += payload;
     },
-    decrement: state => {
-      state.counter--;
+    decrement: (state, payload) => {
+      state.counter -= payload;
     },
   },
   actions: {
-    increment: ({ commit }) => {
-      commit('increment');
+    increment: ({ commit }, payload) => {
+      commit('increment', payload);
     },
-    decrement: context => {
-      context.commit('decrement');
+    decrement: (context, payload) => {
+      context.commit('decrement', payload);
     },
-    asyncIncrement: ({ commit }) => {
+    asyncIncrement: ({ commit }, payload) => {
       setTimeout(() => {
-        commit('increment');
-      }, 1000);
+        commit('increment', payload.by);
+      }, payload.duration);
     },
-    asyncDecrement: context => {
+    asyncDecrement: (context, payload) => {
       setTimeout(() => {
-        context.commit('decrement');
-      }, 1000);
+        context.commit('decrement', payload.by);
+      }, payload.duration);
     },
   },
 });
