@@ -33,5 +33,7 @@ References Links:
 		Custom Directives: http://vuejs.org/guide/custom-directive.html
     Filters: http://vuejs.org/guide/syntax.html#Filters
     Mixins: http://vuejs.org/guide/mixins.html
+    Vuex: https://vuex.vuejs.org/en/
 	Other Docs:
 		vue-cli: https://github.com/vuejs/vue-cli
+    Vuex Github Page: https://github.com/vuejs/vuex
