@@ -24,6 +24,8 @@ import AnotherCounter from './components/AnotherCounter.vue';
 import Result from './components/Result.vue';
 import AnotherResult from './components/AnotherResult.vue';
 
+import * as types from './store/types';
+
 export default {
   components: {
     appCounter: Counter,
@@ -33,16 +35,16 @@ export default {
   },
   methods: {
     updateValue(event) {
-      this.$store.dispatch('updateValue', event.target.value);
+      this.$store.dispatch(types.UPDATE_VALUE, event.target.value);
     },
   },
   computed: {
     value: {
       get() {
-        return this.$store.getters.value;
+        return this.$store.getters[types.VALUE];
       },
       set(value) {
-        this.$store.dispatch('updateValue', value);
+        this.$store.dispatch(types.UPDATE_VALUE, value);
       }
     },
   },
